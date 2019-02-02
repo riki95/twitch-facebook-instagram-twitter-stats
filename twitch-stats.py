@@ -17,7 +17,10 @@ userIDs = usersget(headers,users)
 followers_count = followersget(headers, userIDs)
 
 with open('twitch.csv', mode='w') as twitchcsv:
+    print('Creating CSV...')
     twitch_writer = csv.writer(twitchcsv, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    twitch_writer.writerow(['Username', 'UserID', 'Followers'])
+    twitch_writer.writerow(['Username', 'UserID', 'Link', 'Followers'])  # Create first Row
     for i in range(len(users)):
-        twitch_writer.writerow([users[i], userIDs[i], followers_count[i]])
+        twitch_writer.writerow([users[i], userIDs[i], 'twitch.tv/' + users[i], followers_count[i]])
+
+print('Done!')

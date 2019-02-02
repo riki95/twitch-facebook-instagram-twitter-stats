@@ -2,6 +2,7 @@ import requests
 import json
 
 def usersget(headers, users):
+        print('Getting user IDs...')
         users_list = []
         for user in users:
                 params = {
@@ -14,6 +15,7 @@ def usersget(headers, users):
         return users_list
 
 def followersget(headers, userIDs):
+        print('Getting user followers...')
         users_followers = []
         for userID in userIDs:
                 params = (
