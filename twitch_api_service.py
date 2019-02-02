@@ -5,8 +5,9 @@ import time  # Used it unil I get an OAuth to avoid 429 error
 def usersget(headers, users):
         print('Getting user IDs...')
         users_list = []
+        users_viewcounts = []
         for user in users:
-                print('Getting ' + user)
+                print('\tGetting ' + user)
                 time.sleep(2)
                 params = {
                 ('login', user)
@@ -16,13 +17,14 @@ def usersget(headers, users):
                 json_data = json.loads(json_string)  # Load the JSon file
                 # print(json_data)
                 users_list.append(json_data["data"][0]['id'])  # Get the ID
-        return users_list
+                users_viewcounts.append(json_data["data"][0]['view_count'])
+        return users_list, users_viewcounts
 
 def followersget(headers, userIDs):
         print('Getting user followers...')
         users_followers = []
         for userID in userIDs:
-                print('Getting ' + userID)
+                print('\tGetting ' + userID)
                 time.sleep(2)
                 params = (
                 ('to_id', userID),
