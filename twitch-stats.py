@@ -7,9 +7,29 @@ headers = {
 }
 
 users = [
-    'Sco',
-    'Thijs',
-    'Sjow'
+    'Cicciogamer89',
+    'TonyTubo',
+    'LosAmigos',
+    'PiazzTwitch',
+    'IlGattoSulTubo',
+    'MarcusKron',
+    'CKibe',
+    'iTermosifoni',
+    'VKingplays',
+    'Budilicious',
+    'Urcailduca',
+    'PolyHS',
+    'Nerdoardo',
+    'Nerdocracy',
+    'Berrofronzo',
+    'Bloor95',
+    'Gera89',
+    'Shiftymine',
+    'Turbo_feto',
+    'Illness95',
+    'Bunnyhoppor',
+    'Kikko',
+    'NishaStreaming',
 ]
 
 userIDs = usersget(headers,users)
