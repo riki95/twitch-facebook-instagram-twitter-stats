@@ -1,8 +1,13 @@
 import requests
 import json
 import time  # Used it unil I get an OAuth to avoid 429 error
+from secrets import client_id_TW, OAuth_TW
 
-def usersget(headers, users):
+headers = {
+    'Client-ID': client_id_TW,
+}
+
+def usersget(users):
         print('Getting user IDs...')
         users_list = []
         users_viewcounts = []
@@ -20,7 +25,7 @@ def usersget(headers, users):
                 users_viewcounts.append(json_data["data"][0]['view_count'])
         return users_list, users_viewcounts
 
-def followersget(headers, userIDs):
+def followersget(userIDs):
         print('Getting user followers...')
         users_followers = []
         for userID in userIDs:
