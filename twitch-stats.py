@@ -1,9 +1,18 @@
-from twitch import TwitchClient
 from secrets import client_id, OAuth
+from twitch_api_service import usersget, followersget
 
-client = TwitchClient(client_id=client_id, oauth_token=OAuth)
-channel = client.channels.get_by_id(44322880)
+headers = {
+    'Client-ID': client_id,
+}
 
-print(channel.id)
-print(channel.name)
-print(channel.display_name)
+users = [
+    'Sco',
+    'Thijs',
+    'Sjow'
+]
+
+userIDs = usersget(headers,users)
+print(userIDs)
+
+followers_count = followersget(headers, userIDs)
+print(followers_count)
