@@ -1,4 +1,5 @@
-twitch-stats
+**twitch-stats**
+[![HitCount](http://hits.dwyl.io/riki95/twitch-facebook-instagram-twitter-stats.svg)](http://hits.dwyl.io/riki95/twitch-facebook-instagram-twitter-stats)
 
 Script that is able to interact with Twitch API to get Followers Count, Viewers Count and other info basing on a given list of Usernames.
 
